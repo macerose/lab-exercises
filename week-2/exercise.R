@@ -1,7 +1,6 @@
 ## Part 1: Debugging
-
-my_num <- 6
-initials <- "?. ?."
+my_num <- "k"
+initials <- "M. S."
 
 my_vector <- c(my_num, initials)
 
@@ -9,21 +8,22 @@ my_vector <- c(my_num, initials)
 vector_sum <- sum(my_vector)
 
 # Describe why this doesn't work: 
-# 
+# For vectors, both variables need to be either a number or a character. You cannot have one of each.
 
 install.packages("stringr")
-
+library("stringr")
 my_line <- "Hey, hey, this is the library"
 
 print(str_length(my_line))
 
 # Describe why this doesn't work: 
-# 
+# You have to load the package into your code before running later code that uses 
+# such package by using "library("stringer")"
 
-said_the_famous <- paste(my_line, " - ", initial)
+said_the_famous <- paste(my_line, " - ", initials)
 
 # Describe why this doesn't work: 
-# 
+# The object "initial" is not a variable. The variable established earlier was "initials"
 
 
 ## Part 2 - Vector and function practice
